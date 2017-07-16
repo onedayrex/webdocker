@@ -1,4 +1,4 @@
- FROM brave8/maven-jdk8:latest
+FROM daocloud.io/brave8/maven-jdk7-tomcat8:latest
 
 RUN mkdir /var/tmp/webapp
 ADD ./ /var/tmp/webapp
