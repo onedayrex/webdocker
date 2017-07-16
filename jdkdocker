@@ -2,5 +2,6 @@ FROM daocloud.io/brave8/maven-jdk7-tomcat8:latest
 
 RUN mkdir /var/tmp/webapp
 ADD ./ /var/tmp/webapp
-RUN cd /var/tmp/webapp && mvn package && java -Dfile.encoding=GBK -jar  /var/tmp/webapp/target/webdocker-1.0.0.jar
+RUN cd /var/tmp/webapp && mvn package
 EXPOSE 8080
+#CMD ["java -Dfile.encoding=GBK -jar  /var/tmp/webapp/target/webdocker-1.0.0.jar","run"]
