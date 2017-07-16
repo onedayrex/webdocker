@@ -1,0 +1,6 @@
+ FROM brave8/maven-jdk8:latest
+
+RUN mkdir /var/tmp/webapp
+ADD ./ /var/tmp/webapp
+RUN cd /var/tmp/webapp && mvn package && java -Dfile.encoding=GBK -jar  /var/tmp/webapp/target/webdocker-1.0.0.jar
+EXPOSE 8080

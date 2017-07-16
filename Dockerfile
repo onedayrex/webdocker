@@ -3,6 +3,7 @@ MAINTAINER onedayrex "1115757866@qq.com"
 
 #安装JDK
 RUN sed -i "s/archive.ubuntu.com/cn.archive.ubuntu.com/g" /etc/apt/sources.list
+add-apt-repository ppa:webupd8team/java
 RUN apt-get update -y
 RUN apt-get install -y wget
 RUN apt-get install -y openjdk-7-jdk
