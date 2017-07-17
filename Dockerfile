@@ -36,4 +36,4 @@ ADD ./ /var/tmp/webapp
 RUN cd /var/tmp/webapp && mvn package && java -Dfile.encoding=GBK -jar  /var/tmp/webapp/target/webdocker-1.0.0.jar
 EXPOSE 8080
 
-#CMD ["./var/tmp/tomcat/apache-tomcat-8.0.33/bin/catalina.sh","run"]
+CMD ["./var/tmp/tomcat/apache-tomcat-8.0.33/bin/catalina.sh","run"]
