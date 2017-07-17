@@ -58,9 +58,9 @@ RUN cd "/tmp" && \
     rm "${JAVA_HOME}/jre/lib/security/README.txt"
 RUN mkdir /var/tmp/maven
 RUN mkdir /usr/lib/maven
-RUN wget -P /var/tmp/maven  http://apache.fayea.com/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
-RUN tar xzf /var/tmp/maven/apache-maven-3.3.9-bin.tar.gz -C /usr/lib/maven
-RUN rm -rf /var/tmp/maven/apache-maven-3.3.9-bin.tar.gz
+RUN wget -P /var/tmp/maven  http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
+RUN tar xzf /var/tmp/maven/apache-maven-3.5.0-bin.tar.gz -C /usr/lib/maven
+RUN rm -rf /var/tmp/maven/apache-maven-3.5.0-bin.tar.gz
 RUN apk del build-dependencies && \
     rm "/tmp/"*
 CMD ["java","-version"]
