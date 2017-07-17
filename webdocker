@@ -1,4 +1,4 @@
-FROM oneday/alpinemaven
+FROM onedayrex/webdocker
 MAINTAINER onedayrex "1115757866@qq.com"
 
 RUN mkdir /var/tmp/webapp
