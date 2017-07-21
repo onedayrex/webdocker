@@ -5,7 +5,9 @@ ENV JAVA_VERSION=8 \
     JAVA_BUILD=11 \
     JAVA_PATH=d54c1d3a095b4ff2b6607d096fa80163 \
     JAVA_HOME="/usr/lib/jvm/default-jvm" \
-    MAVEN_HOME="/usr/lib/maven/bin"
+    MAVEN_HOME="/usr/lib/maven"
+ENV PATH="${JAVA_HOME}/bin:${PATH}"
+ENV PATH="${MAVEN_HOME}/bin:${PATH}"
 
 #安装基本工具
 RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip
