@@ -1,9 +1,9 @@
-FROM onedayrex/webdocker
+FROM  onedayrex/webdocker
 MAINTAINER onedayrex "1115757866@qq.com"
 
 RUN mkdir /var/tmp/webapp
 ADD ./ /var/tmp/webapp
 RUN cd /var/tmp/webapp && mvn package
 ENV PATH=$MAVEN_HOME/bin:$PATH
-EXPOSE 8080
+EXPOSE 8088
 CMD ["java","-Dfile.encoding=GBK","-jar","/var/tmp/webapp/target/webdocker-1.0.0.jar"]
